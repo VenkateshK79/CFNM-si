@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "dataset": "adult_web_trending_now",
+  "description": "Source-aware schema for Google Trends Trending Now observations.",
+  "principles": [
+    "public aggregated data only",
+    "preserve source labels",
+    "do not infer individual users",
+    "do not convert bucketed traffic into exact counts"
+  ],
+  "dimensions": {
+    "query": "string",
+    "country_code": "ISO 3166-1 alpha-2",
+    "position": "integer or null",
+    "started_at": "ISO-8601 or null",
+    "active": "boolean or null",
+    "search_volume_label": "string or null",
+    "increase_percentage": "number or null",
+    "trend_breakdown": "array of strings or null"
+  },
+  "provenance": {
+    "source": "Google Trends Trending Now",
+    "source_url": "string",
+    "retrieved_at": "ISO-8601",
+    "method": "RSS|CSV|manual|other"
+  },
+  "limitations": {
+    "rss": "RSS is limited compared with the full Trending Now interface.",
+    "search_volume": "Bucketed traffic labels are not exact search counts.",
+    "trend_meaning": "A trend indicates a recent surge in search interest and may be associated with a newsworthy topic."
+  }
+}
