@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "dataset": "adult_web_observatory",
+  "description": "Versioned schema for public, aggregated adult-web terminology and search-interest observations.",
+  "principles": ["public sources only","aggregated data only","no personal data","no invented metrics"],
+  "dimensions": {
+    "term": "string",
+    "term_group": "string",
+    "country_code": "ISO 3166-1 alpha-2 or null",
+    "region_code": "ISO 3166-2 or null",
+    "search_property": "web|news|images|youtube|shopping|other",
+    "category": "string or null",
+    "period_start": "YYYY-MM-DD",
+    "period_end": "YYYY-MM-DD",
+    "granularity": "day|week|month|year"
+  },
+  "metrics": {
+    "interest_index": "relative search-interest index; never treated as an absolute count",
+    "rank": "source-provided rank when available",
+    "source_score": "source-provided score when available"
+  },
+  "provenance": {
+    "source": "string",
+    "retrieved_at": "ISO-8601",
+    "source_url": "string",
+    "method": "string"
+  }
+}
