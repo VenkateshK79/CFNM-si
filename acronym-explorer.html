@@ -35,8 +35,8 @@
 </main>
 <script>
 const terms=[
-["CFNM","Core acronym","Commonly means “clothed female, naked male.” It is an established niche acronym used to describe a particular adult or fetish context."],
-["CMNF","Related acronym","Commonly means “clothed male, nude female.” It is often discussed as a contrasting or related acronym to CFNM."],
+["CFNM","Core acronym","Commonly means “clothed female, naked male.” It is an established niche acronym used to describe a particular adult or fetish context.","/cfnm.html"],
+["CMNF","Related acronym","Commonly means “clothed male, nude female.” It is often discussed as a contrasting or related acronym to CFNM.","/cmnf.html"],
 ["CFNM content","Usage term","A broad label for material categorized or described using the CFNM acronym. Usage can vary between publishers and communities."],
 ["CFNM community","Usage term","A general description for an online audience or community organized around CFNM-related interests or terminology; it does not identify one specific organization."],
 ["CFNM creator","Usage term","A creator whose work is categorized, described or marketed using the CFNM term."],
@@ -52,7 +52,7 @@ const grid=document.getElementById("grid"),search=document.getElementById("searc
 function render(){
  const q=search.value.trim().toLowerCase();
  const matches=terms.filter(([n,t,d])=>(n+" "+t+" "+d).toLowerCase().includes(q));
- grid.innerHTML=matches.map(([n,t,d])=>'<article class="term"><div class="type">'+t+'</div><h2>'+n+'</h2><p>'+d+'</p></article>').join("");
+ grid.innerHTML=matches.map(([n,t,d,u])=>'<article class="term"><div class="type">'+t+'</div><h2><a href="'+(u||'#')+'">'+n+'</a></h2><p>'+d+'</p></article>').join("");
  count.textContent=matches.length+" term"+(matches.length===1?"":"s")+" found";
  empty.style.display=matches.length?"none":"block";
 }
