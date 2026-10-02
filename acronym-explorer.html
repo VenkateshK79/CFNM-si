@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CFNM Acronym Explorer — Search CFNM Terms | CFNM.si</title>
+<meta name="description" content="Search and explore CFNM terminology, acronyms and related online-language terms with concise, factual definitions.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://cfnm.si/acronym-explorer.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="CFNM Acronym Explorer">
+<meta property="og:description" content="Search CFNM terminology and related acronyms with concise definitions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cfnm.si/acronym-explorer.html">
+<meta property="og:site_name" content="CFNM.si">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"CFNM Acronym Explorer","url":"https://cfnm.si/acronym-explorer.html","description":"Searchable reference for CFNM terminology and related acronyms."}
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080a0f;color:#edf1f7;font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:24px}.wrap{max-width:980px;margin:auto}nav{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 28px;font-size:14px}a{color:#aeb8ff;text-decoration:none}a:hover{text-decoration:underline}.hero{border:1px solid #252b36;background:linear-gradient(145deg,#111722,#0b0d12);border-radius:24px;padding:clamp(28px,6vw,55px);margin-bottom:18px}.eyebrow{color:#8e99ff;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1;margin:10px 0 14px;letter-spacing:-.04em}.hero p{max-width:700px;color:#aeb7c7;margin:0}.search{margin-top:26px;width:100%;padding:17px 18px;border-radius:13px;border:1px solid #303746;background:#090c12;color:#fff;font-size:16px;outline:none}.search:focus{border-color:#7884ff}.meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:20px 2px 12px;color:#7f8999;font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.term{border:1px solid #252b36;background:#10141c;border-radius:16px;padding:20px}.term h2{margin:0 0 4px;font-size:21px}.type{display:inline-block;color:#8e99ff;font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}.term p{margin:0;color:#aeb7c7}.empty{display:none;border:1px dashed #343b49;border-radius:16px;padding:30px;text-align:center;color:#8993a4}@media(max-width:680px){.grid{grid-template-columns:1fr}.hero{border-radius:20px}body{padding:18px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<nav><a href="/">CFNM.si</a><a href="/what-is-cfnm.html">What is CFNM?</a><a href="/glossary.html">Glossary</a><a href="/cfnm-vs-cmnf.html">CFNM vs CMNF</a><a href="/directory.html">Directory</a><a href="/acquisition.html">Acquisition</a></nav>
+<section class="hero">
+<div class="eyebrow">Terminology reference</div>
+<h1>CFNM Acronym Explorer</h1>
+<p>Search a growing reference of acronyms and terminology associated with CFNM and adjacent online-language contexts. Definitions are concise, descriptive and non-graphic.</p>
+<input id="search" class="search" type="search" placeholder="Search a term, acronym or definition…" autocomplete="off" aria-label="Search terminology">
+</section>
+<div class="meta"><span id="count"></span><span>Reference updated October 2026</span></div>
+<section id="grid" class="grid" aria-live="polite"></section>
+<div id="empty" class="empty">No matching term found. Try a shorter keyword or browse the glossary.</div>
+</main>
+<script>
+const terms=[
+["CFNM","Core acronym","Commonly means “clothed female, naked male.” It is an established niche acronym used to describe a particular adult or fetish context."],
+["CMNF","Related acronym","Commonly means “clothed male, nude female.” It is often discussed as a contrasting or related acronym to CFNM."],
+["CFNM content","Usage term","A broad label for material categorized or described using the CFNM acronym. Usage can vary between publishers and communities."],
+["CFNM community","Usage term","A general description for an online audience or community organized around CFNM-related interests or terminology; it does not identify one specific organization."],
+["CFNM creator","Usage term","A creator whose work is categorized, described or marketed using the CFNM term."],
+["CFNM domain","Branding term","A domain name containing the CFNM acronym. CFNM.si is a four-letter example of this type."],
+["NSFW","Internet acronym","Commonly means “not safe for work.” It is a general internet label for material that may be inappropriate to view in a workplace or public setting."],
+["SFW","Internet acronym","Commonly means “safe for work.” It is generally used to describe material considered suitable for ordinary workplace or public viewing."],
+["Acronym","Language term","An abbreviation formed from initial letters or parts of words. CFNM is an example of a four-letter acronym."],
+["Niche keyword","Search term","A relatively specific word or phrase associated with a defined subject, audience or community."],
+["Terminology","Language term","The collection of specialized words, phrases or abbreviations used within a particular subject area."],
+["Content label","Publishing term","A descriptive tag or phrase used to communicate the subject, category or context of published material."]
+];
+const grid=document.getElementById("grid"),search=document.getElementById("search"),count=document.getElementById("count"),empty=document.getElementById("empty");
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const matches=terms.filter(([n,t,d])=>(n+" "+t+" "+d).toLowerCase().includes(q));
+ grid.innerHTML=matches.map(([n,t,d])=>'<article class="term"><div class="type">'+t+'</div><h2>'+n+'</h2><p>'+d+'</p></article>').join("");
+ count.textContent=matches.length+" term"+(matches.length===1?"":"s")+" found";
+ empty.style.display=matches.length?"none":"block";
+}
+search.addEventListener("input",render); render();
+</script>
+</body>
+</html>
