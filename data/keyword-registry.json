@@ -1,15 +1,130 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "updated": "2026-10-02",
-  "groups": [
-    {"id":"core","name":"Core terminology","terms":["CFNM","CMNF"]},
-    {"id":"web-literacy","name":"Web literacy","terms":["NSFW","SFW","adult content","content label"]},
-    {"id":"search-language","name":"Search language","terms":["adult website","adult content","adult entertainment","adult industry"]},
-    {"id":"research","name":"Research concepts","terms":["niche keyword","acronym","search trends","internet trends"]}
+  "purpose": "Master taxonomy for the CFNM.si Adult Web Trends Observatory. Terms are research labels, not endorsements or rankings.",
+  "categories": [
+    {
+      "id": "general-adult-web",
+      "name": "General adult web",
+      "description": "Broad, non-graphic terminology used to study the adult-web ecosystem.",
+      "terms": ["adult content", "adult website", "adult entertainment", "adult industry", "porn", "pornography", "NSFW"]
+    },
+    {
+      "id": "adult-video",
+      "name": "Adult video terminology",
+      "description": "High-level search language describing adult video formats and platforms.",
+      "terms": ["adult videos", "adult video", "porn video", "porn videos", "adult streaming", "adult video site"]
+    },
+    {
+      "id": "creator-economy",
+      "name": "Creator economy",
+      "description": "Terms connected with independent adult creators and subscription-based publishing.",
+      "terms": ["adult creator", "content creator", "creator subscription", "fan subscription", "creator platform", "premium creator"]
+    },
+    {
+      "id": "live-webcam",
+      "name": "Live and webcam",
+      "description": "General terminology for live adult-web services without storing or displaying explicit material.",
+      "terms": ["adult webcam", "webcam site", "live cam", "adult live stream", "cam model", "live adult"]
+    },
+    {
+      "id": "fetish-terminology",
+      "name": "Fetish terminology",
+      "description": "Acronyms and high-level terminology used to study niche adult search language.",
+      "terms": ["CFNM", "CMNF", "BDSM", "fetish", "kink", "adult fetish"]
+    },
+    {
+      "id": "lgbtq-adult",
+      "name": "LGBTQ+ adult terminology",
+      "description": "Broad terminology for studying adult-web search language across LGBTQ+ categories.",
+      "terms": ["gay adult", "lesbian adult", "bisexual adult", "LGBTQ adult", "queer adult"]
+    },
+    {
+      "id": "adult-animation",
+      "name": "Adult animation and anime",
+      "description": "Broad terminology for adult animation and anime-related search behavior.",
+      "terms": ["adult animation", "adult anime", "hentai", "animated adult content"]
+    },
+    {
+      "id": "adult-dating",
+      "name": "Adult dating and relationships",
+      "description": "Search language around adult dating, relationships and adult-oriented social platforms.",
+      "terms": ["adult dating", "hookup site", "adult dating site", "casual dating", "adult personals"]
+    },
+    {
+      "id": "privacy-safety",
+      "name": "Privacy and safety",
+      "description": "Research terms for privacy, security, age boundaries and account protection on adult websites.",
+      "terms": ["adult website privacy", "NSFW privacy", "adult content privacy", "adult website security", "age verification", "adult content safety"]
+    },
+    {
+      "id": "industry-business",
+      "name": "Industry and business",
+      "description": "Commercial and professional terminology used to study the adult-web economy.",
+      "terms": ["adult industry", "adult media", "adult publisher", "adult advertising", "adult marketing", "adult business"]
+    },
+    {
+      "id": "search-behavior",
+      "name": "Search behavior and terminology",
+      "description": "Research concepts used to interpret search demand and terminology changes.",
+      "terms": ["search trends", "search interest", "rising searches", "related searches", "niche keyword", "keyword trends"]
+    },
+    {
+      "id": "core-cfnm",
+      "name": "CFNM and related terminology",
+      "description": "The site's core terminology cluster.",
+      "terms": ["CFNM", "CMNF", "CFNM content", "CFNM community", "CFNM creator", "CFNM domain"]
+    }
   ],
+  "country_scope": {
+    "mode": "configurable",
+    "priority_markets": ["Worldwide", "India", "United States", "United Kingdom", "Canada", "Australia", "Germany", "France", "Japan", "Brazil"],
+    "expansion": "Use all countries and subregions supported by the selected source when available."
+  },
+  "search_properties": [
+    "web",
+    "news",
+    "images",
+    "youtube",
+    "shopping"
+  ],
+  "periods": [
+    "30d",
+    "90d",
+    "12m",
+    "5y",
+    "custom"
+  ],
+  "observatory_outputs": [
+    "interest_over_time",
+    "interest_by_country",
+    "interest_by_region",
+    "related_searches",
+    "rising_searches",
+    "top_terms",
+    "top_rising_terms",
+    "trending_now",
+    "category_comparisons"
+  ],
+  "measurement_rules": {
+    "google_trends_interest": "Relative index, normally scaled 0-100 within the selected query, geography and time context.",
+    "absolute_search_volume": "Never derive an absolute count from a Google Trends normalized score.",
+    "search_volume": "Only display an absolute volume when a source explicitly provides one and the source/method is recorded.",
+    "demographics": "Do not infer gender, sexuality, age or identity from Google Trends search data.",
+    "low_volume": "Treat missing or zero Trends values as insufficient public signal, not proof of zero searches.",
+    "comparisons": "Keep geography, time range and search property consistent when comparing terms.",
+    "adult_content": "Store terminology and aggregate research signals only; do not store explicit media or scraped adult-site content."
+  },
+  "source_strategy": {
+    "google_trends_explore": "Specific keyword/topic interest, geography, related searches and rising searches.",
+    "google_trends_bigquery": "Public Top 25 and Top 25 Rising discovery layer for supported countries/regions.",
+    "trending_now": "Recent trend discovery and trend-breakdown layer where supported.",
+    "other_public_sources": "Add only when provenance, methodology and licensing/terms permit reuse."
+  },
   "limits": {
     "max_trends_comparison_terms": 5,
     "demographic_data": "not inferred from Google Trends",
-    "absolute_search_volume": "not derived from normalized Trends scores"
+    "absolute_search_volume": "not derived from normalized Trends scores",
+    "content_policy": "No explicit media, scraped adult libraries, downloads, or personal search data."
   }
 }
