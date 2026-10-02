@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "updated": "2026-10-02",
+  "groups": [
+    {"id":"core","name":"Core terminology","terms":["CFNM","CMNF"]},
+    {"id":"web-literacy","name":"Web literacy","terms":["NSFW","SFW","adult content","content label"]},
+    {"id":"search-language","name":"Search language","terms":["adult website","adult content","adult entertainment","adult industry"]},
+    {"id":"research","name":"Research concepts","terms":["niche keyword","acronym","search trends","internet trends"]}
+  ],
+  "limits": {
+    "max_trends_comparison_terms": 5,
+    "demographic_data": "not inferred from Google Trends",
+    "absolute_search_volume": "not derived from normalized Trends scores"
+  }
+}
