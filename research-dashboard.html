@@ -14,24 +14,72 @@ function update(){
 }
 document.getElementById('update').addEventListener('click',update);update();
 })();
-</script>*{box-sizing:border-box}body{margin:0;background:#080a0f;color:#edf1f7;font:16px/1.7 system-ui;padding:24px}.wrap{max-width:950px;margin:auto}nav{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px;font-size:14px}a{color:#aeb8ff}.card{background:#10141c;border:1px solid #252b36;border-radius:22px;padding:clamp(25px,5vw,48px)}h1{font-size:clamp(38px,7vw,62px);line-height:1.05;margin:8px 0 16px}.eyebrow{color:#8e99ff;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700}.lead{font-size:19px;color:#bac3d0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}.node{border:1px solid #2a313e;background:#0b0e14;border-radius:15px;padding:18px}.node h2{margin:0 0 5px;font-size:20px}.node p{color:#aab4c3;margin:0}.pill{display:inline-block;border:1px solid #303746;border-radius:99px;padding:4px 9px;margin:3px;color:#9faabc;font-size:12px}.note{border-left:3px solid #5965c9;padding:12px 16px;background:#0b0e14;color:#aab4c3;margin:24px 0}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style></head><body><main class="wrap"><section class="toolbar" aria-label="Research controls">
-<label>Compare terms
-<select id="terms"><option value="CFNM,CMNF">CFNM vs CMNF</option><option value="CFNM,CMNF,NSFW">CFNM vs CMNF vs NSFW</option><option value="CFNM,CMNF,niche keyword">CFNM vs CMNF vs niche keyword</option></select></label>
-<label>Region
-<select id="geo"><option value="">Worldwide</option><option value="IN">India</option><option value="US">United States</option><option value="GB">United Kingdom</option><option value="CA">Canada</option><option value="AU">Australia</option></select></label>
-<label>Period
-<select id="period"><option value="today 5-y">Past 5 years</option><option value="today 12-m">Past 12 months</option><option value="today 90-d">Past 90 days</option><option value="today 30-d">Past 30 days</option></select></label>
-<button id="update">Update research view</button></section>
-<section class="embedcard"><div class="embedhead"><div><strong>Interest over time</strong><span id="state">CFNM vs CMNF · Worldwide · 5 years</span></div><a id="open" target="_blank" rel="noopener">Open in Google Trends ↗</a></div><iframe id="trend" title="Google Trends comparison" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><p class="source-note">Data source: Google Trends. Values are normalized relative interest, not absolute search volume.</p></section>
-<section class="grid">
-<div class="node"><h2>What this measures</h2><p>Relative search interest for the selected terms, time range and geography. A value of 100 represents the peak relative interest within the selected comparison.</p></div>
-<div class="node"><h2>What it does not measure</h2><p>It does not provide a definitive count of searches, users, traffic, revenue, audience size or commercial intent.</p></div>
+</script>*{box-sizing:border-box}body{margin:0;background:#080a0f;color:#edf1f7;font:16px/1.7 system-ui;padding:24px}.wrap{max-width:950px;margin:auto}nav{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px;font-size:14px}a{color:#aeb8ff}.card{background:#10141c;border:1px solid #252b36;border-radius:22px;padding:clamp(25px,5vw,48px)}h1{font-size:clamp(38px,7vw,62px);line-height:1.05;margin:8px 0 16px}.eyebrow{color:#8e99ff;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700}.lead{font-size:19px;color:#bac3d0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}.node{border:1px solid #2a313e;background:#0b0e14;border-radius:15px;padding:18px}.node h2{margin:0 0 5px;font-size:20px}.node p{color:#aab4c3;margin:0}.pill{display:inline-block;border:1px solid #303746;border-radius:99px;padding:4px 9px;margin:3px;color:#9faabc;font-size:12px}.note{border-left:3px solid #5965c9;padding:12px 16px;background:#0b0e14;color:#aab4c3;margin:24px 0}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style></head><body><main class="wrap">
+<section class="hero">
+<div class="eyebrow">Adult Web Trends Observatory</div>
+<h1>Internet Interest Dashboard</h1>
+<p class="lead">A methodology-first research interface for studying adult-web terminology, search interest, regional patterns and online-language change using public data.</p>
+<div class="notice"><strong>Data boundary:</strong> this dashboard studies search behavior and terminology, not individuals. No private user data, explicit media or personal demographic profiles are collected here.</div>
 </section>
-<section class="card"><h2>Reading the chart responsibly</h2><p>Use the same geography and time period when comparing terms. Treat isolated spikes cautiously, especially for low-volume terms. Related-search data can also be incomplete or filtered.</p><p><a href="/sources.html">See our methodology →</a></p></section><nav><a href="/">CFNM.si</a><a href="/acronym-explorer.html">Explorer</a><a href="/research.html">Research</a><a href="/web-literacy.html">Web Literacy</a><a href="/privacy-guide.html">Privacy</a></nav><article class="card">
-<div class="eyebrow">Research dashboard</div><h1>CFNM Research Dashboard</h1><p class="lead">A framework for publishing transparent research about niche terminology, search interest and public web language.</p>
-<h2>Search-interest methodology</h2><p>When CFNM.si publishes Google Trends observations, the figures will be treated as <strong>relative search interest</strong>, not absolute search volume. Google normalizes Trends data to a 0–100 scale based on the selected time and geography.</p>
-<div class="note"><strong>Important:</strong> a value of 100 means the highest relative interest in the selected comparison, not 100 searches. Low-volume queries may not generate a usable Trends graph.</div>
-<h2>Planned measurements</h2><div class="grid"><div class="node"><h2>Interest over time</h2><p>Compare terminology across a consistent time range.</p></div><div class="node"><h2>Regional interest</h2><p>Compare where a term has relatively higher search interest.</p></div><div class="node"><h2>Related queries</h2><p>Document publicly surfaced related search language where available.</p></div><div class="node"><h2>Terminology changes</h2><p>Track definitions and acronym variants with dated source notes.</p></div></div>
-<h2>Data standards</h2><ul><li>Identify the source and date of every measurement.</li><li>Keep geography and comparison periods consistent.</li><li>Do not convert normalized Trends scores into invented search counts.</li><li>Separate observed data from interpretation.</li><li>Use public sources and avoid reproducing copyrighted adult material.</li></ul>
-<p><a href="/research.html">Read the full research methodology →</a></p>
-<p><a href="/">← Back to CFNM.si</a></p></article></main></body></html>
+
+<section class="controls" aria-label="Research controls">
+<div class="control"><label for="query">Keywords / terms</label><input id="query" value="CFNM,CMNF" placeholder="CFNM, CMNF"></div>
+<div class="control"><label for="geo">Country / region</label><select id="geo"><option value="">Worldwide</option><option value="IN">India</option><option value="US">United States</option><option value="GB">United Kingdom</option><option value="CA">Canada</option><option value="AU">Australia</option><option value="DE">Germany</option><option value="FR">France</option><option value="JP">Japan</option><option value="BR">Brazil</option></select></div>
+<div class="control"><label for="period">Period</label><select id="period"><option value="today 5-y">5 years</option><option value="today 12-m">12 months</option><option value="today 90-d">90 days</option><option value="today 30-d">30 days</option></select></div>
+<div class="control"><label for="property">Search property</label><select id="property"><option value="web">Google Search</option><option value="news">Google News</option><option value="images">Google Images</option><option value="youtube">YouTube Search</option><option value="froogle">Google Shopping</option></select></div>
+<div class="control"><label for="category">Category</label><select id="category"><option value="0">All categories</option><option value="10">Arts & Entertainment</option><option value="14">Society</option><option value="13">Games</option><option value="3">Autos & Vehicles</option></select></div>
+<button id="update" type="button">Explore</button>
+</section>
+
+<section class="embedcard">
+<div class="embedhead"><div><strong id="chartTitle">Search interest</strong><span id="state">CFNM, CMNF · Worldwide · 5 years · Google Search</span></div><a id="open" target="_blank" rel="noopener">Open in Google Trends ↗</a></div>
+<iframe id="trend" title="Google Trends research chart" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<p class="source-note">Google Trends values are relative, normalized measurements — not absolute search counts.</p>
+</section>
+
+<section class="grid">
+<div class="node"><h2>Keyword Observatory</h2><p>Compare up to five terms at a time. Useful for studying acronym variants, terminology changes and relative interest between related concepts.</p><a id="keywordLink" target="_blank" rel="noopener">Open keyword comparison →</a></div>
+<div class="node"><h2>Regional Observatory</h2><p>Google Trends can show where a term has relatively higher interest. Regional values are relative to searches in that geography, not a count of users.</p><a id="regionLink" target="_blank" rel="noopener">Open regional view →</a></div>
+<div class="node"><h2>Related Searches</h2><p>Use related queries and topics to discover how people phrase a subject. Treat low-volume or unstable results cautiously.</p><a id="relatedLink" target="_blank" rel="noopener">Explore related searches →</a></div>
+<div class="node"><h2>Search Property</h2><p>Compare the same terminology across Google web, News, Images, Shopping or YouTube where the selected property supports the query.</p></div>
+</section>
+
+<section class="card">
+<h2>Adult-web research dimensions</h2>
+<div class="matrix">
+<div><b>Terminology</b><span>CFNM, CMNF, acronyms, labels, synonyms</span></div>
+<div><b>Geography</b><span>Countries, regions and available metros</span></div>
+<div><b>Time</b><span>Long-term, annual, quarterly and recent windows</span></div>
+<div><b>Search type</b><span>Web, News, Images, Shopping and YouTube where available</span></div>
+<div><b>Related language</b><span>Related searches, topics and query clusters</span></div>
+<div><b>Demographics</b><span>Only when a reputable public dataset explicitly provides demographic estimates; Google Trends itself is not treated as a gender or individual-user database.</span></div>
+</div>
+</section>
+
+<section class="card">
+<h2>What we can responsibly measure</h2>
+<ul><li>Relative search-interest trends</li><li>Geographic concentration of interest</li><li>Related query language</li><li>Changes in terminology over time</li><li>Differences between search properties</li><li>Publicly documented industry and web-literacy signals</li></ul>
+<h2>What we will not claim</h2>
+<ul><li>Exact number of adult users from Trends scores</li><li>Gender or sexual identity of individual searchers</li><li>Private browsing behavior</li><li>Revenue, conversion or audience figures without a credible source</li></ul>
+<p><a href="/sources.html">Read the research methodology →</a></p>
+</section>
+<style>
+.controls{display:grid;grid-template-columns:2fr repeat(4,1fr) auto;gap:10px;border:1px solid #252b36;background:#10141c;border-radius:18px;padding:16px;margin:14px 0}.control{min-width:0}.control label{display:block;color:#aeb7c5;font-size:12px;font-weight:650;margin-bottom:5px}.control input,.control select,.controls button{width:100%;min-height:42px;background:#0b0e14;color:#edf1f7;border:1px solid #303746;border-radius:9px;padding:9px 10px;font:inherit}.controls button{cursor:pointer;align-self:end;background:#8e99ff;color:#080a0f;border-color:#8e99ff;font-weight:750}.embedcard{border:1px solid #252b36;background:#10141c;border-radius:22px;padding:18px;margin-bottom:14px}.embedhead{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:12px}.embedhead strong{display:block}.embedhead span{display:block;color:#8f99a9;font-size:13px;margin-top:2px}.embedcard iframe{width:100%;height:520px;border:0;background:#080a0f}.source-note{font-size:12px;color:#7f8998;margin:8px 0 0}.card{border:1px solid #252b36;background:#10141c;border-radius:22px;padding:clamp(22px,4vw,38px);margin-top:14px}.hero{border:1px solid #252b36;background:linear-gradient(145deg,#111722,#0b0d12);border-radius:24px;padding:clamp(28px,6vw,55px);margin-bottom:14px}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1;margin:10px 0 14px}.eyebrow{color:#8e99ff;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700}.lead{font-size:19px;color:#bac3d0}.notice{border-left:3px solid #5d687b;padding:12px 14px;background:#0b0e14;color:#aeb7c5;margin-top:22px}.matrix{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.matrix>div{border:1px solid #2a313e;background:#0b0e14;border-radius:14px;padding:16px}.matrix b{display:block}.matrix span{display:block;color:#aab4c3;margin-top:5px;font-size:14px}.node a{display:inline-block;margin-top:10px}.node p{margin-bottom:0}@media(max-width:850px){.controls{grid-template-columns:1fr 1fr}.control:first-child{grid-column:1/-1}.controls button{grid-column:1/-1}.matrix{grid-template-columns:1fr 1fr}}@media(max-width:520px){.controls,.matrix{grid-template-columns:1fr}.embedcard iframe{height:430px}}
+</style><script>
+(function(){
+const q=document.getElementById('query'),geo=document.getElementById('geo'),period=document.getElementById('period'),property=document.getElementById('property'),category=document.getElementById('category'),frame=document.getElementById('trend'),open=document.getElementById('open'),state=document.getElementById('state'),kw=document.getElementById('keywordLink'),reg=document.getElementById('regionLink'),rel=document.getElementById('relatedLink');
+function cleanTerms(){return q.value.split(',').map(x=>x.trim()).filter(Boolean).slice(0,5)}
+function build(){
+ const terms=cleanTerms(); q.value=terms.join(',');
+ const query=encodeURIComponent(terms.join(','));
+ const g=encodeURIComponent(geo.value),d=encodeURIComponent(period.value),c=encodeURIComponent(category.value);
+ const prop=property.value;
+ const params='?q='+query+'&geo='+g+'&date='+d+'&cat='+c+'&gprop='+encodeURIComponent(prop)+'&hl=en-US';
+ const explore='https://trends.google.com/trends/explore/'+params;
+ const embed='https://trends.google.com/trends/embed/'+params;
+ frame.src=embed;open.href=explore;kw.href=explore;reg.href=explore+'&geo='+g;rel.href=explore;
+ state.textContent=(terms.join(', ')||'No terms')+' · '+(geo.value||'Worldwide')+' · '+period.options[period.selectedIndex].text+' · '+property.options[property.selectedIndex].text;
+}
+document.getElementById('update').addEventListener('click',build);build();
+})();
+</script></main></body></html>
